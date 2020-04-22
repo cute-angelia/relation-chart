@@ -5,6 +5,8 @@
 
 ![预览图](https://ae05.alicdn.com/kf/H89a1818056ca4e2db653b82518700080i.png)
 
+[在线地址](https://cute-angelia.github.io/relation-chart/dist/)
+
 ### 感谢
 
 感谢 [relation-chart](https://github.com/xiedajian/relation-chart)
