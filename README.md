@@ -7,7 +7,7 @@
 
 [github star](https://github.com/cute-angelia/relation-chart)
 
-![预览图](https://ae05.alicdn.com/kf/H89a1818056ca4e2db653b82518700080i.png)
+![预览图](https://ae04.alicdn.com/kf/Hddccc3b8bae147749e43fbd9122d46e1y.png)
 
 [在线地址](https://cute-angelia.github.io/relation-chart/dist/)
 
