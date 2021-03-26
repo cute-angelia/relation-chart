@@ -17,13 +17,14 @@
       <el-submenu index="3">
         <template slot="title">导出</template>
         <el-menu-item @click="exportImg" index="3-1">导出图片</el-menu-item>
+        <el-menu-item @click="saveSetting" index="3-2">保存配置</el-menu-item>
       </el-submenu>
       <el-menu-item index="5" @click="initRes">还原</el-menu-item>
       <el-menu-item index="4"
         ><a
           href="https://github.com/cute-angelia/relation-chart"
           target="_blank"
-          >Github Star</a
+          >Github</a
         ></el-menu-item
       >
     </el-menu>
@@ -57,6 +58,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
+         <el-button @click="resetDialog">清空当前</el-button>
+         &nbsp;&nbsp;
         <el-select
           v-model="currentRole"
           placeholder="当前已存在人物, 选中修改"
@@ -76,10 +79,10 @@
             }}</span>
           </el-option>
         </el-select>
+        
+       
         &nbsp;&nbsp;
-        <el-button @click="resetDialog">清 空</el-button>
-        &nbsp;&nbsp;
-        <el-popconfirm
+        <!-- <el-popconfirm
           v-if="currentRole"
           confirmButtonText="好的"
           cancelButtonText="不用了"
@@ -89,10 +92,9 @@
           @onConfirm="handlerSaveDialogRole"
         >
           <el-button slot="reference" type="primary">保 存</el-button>
-        </el-popconfirm>
+        </el-popconfirm> -->
 
         <el-button
-          v-else
           slot="reference"
           type="primary"
           @click="handlerSaveDialogRole"
@@ -170,7 +172,7 @@
         </el-form-item>
         <el-form-item label="线条颜色"
           ><el-color-picker
-            style="top: 1px;"
+            style="top: 1px;display: block;margin-bottom: 5px;"
             v-model="dialogRoleRes.form.color"
           ></el-color-picker>
           &nbsp; &nbsp;
@@ -238,7 +240,6 @@
 
 <script>
   import RelationChart from './lib/chat'
-  //import { covertSVG2Image } from './lib/exportimg'
   import { saveSvgAsPng } from 'save-svg-as-png'
   import pinyin from 'js-pinyin'
   pinyin.setOptions({ checkPolyphone: false, charCase: 1 })
@@ -296,35 +297,47 @@
         rdata: {
           nodes: [
             {
-              name: '路人甲1',
-              role_id: 'lurenjia1',
+              name: '周子舒',
+              role_id: 'zhouzishu',
               avatar:
-                'http://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/1586758771776776.jpg',
+                'https://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/%E5%91%A8%E5%AD%90%E8%88%92.jpeg',
             },
             {
-              name: '路人乙2',
-              role_id: 'lurenjia2',
+              name: '温客行',
+              role_id: 'wenkexing',
               avatar:
-                'http://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/1586758771776776.jpg',
+                'https://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/%E6%B8%A9%E5%AE%A2%E8%A1%8C.jpeg',
             },
             {
-              name: '路人丙3',
-              role_id: 'lurenjia3',
+              name: '顾湘',
+              role_id: 'guxiang',
               avatar:
-                'http://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/1586758771776776.jpg',
+                'https://best-ecology.oss-cn-hangzhou.aliyuncs.com/knowleage/avatar/2/%E9%A1%BE%E6%B9%98.jpeg',
+            },
+            {
+              name: '宋连城',
+              role_id: 'songliancheng',
+              avatar:
+                'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3178863552,307817009&fm=26&gp=0.jpg',
             },
           ],
           relations: [
             {
-              source: 'lurenjia1',
-              target: 'lurenjia2',
+              source: 'zhouzishu',
+              target: 'wenkexing',
               relation: '爱人仇人',
               color: '#CF3C51',
             },
             {
-              source: 'lurenjia2',
-              target: 'lurenjia3',
-              relation: '女朋友',
+              source: 'guxiang',
+              target: 'zhouzishu',
+              relation: '侍女',
+              color: '#CF3C51',
+            },
+            {
+              source: 'guxiang',
+              target: 'songliancheng',
+              relation: '朋友',
               color: '#CF3C51',
             },
           ],
@@ -484,6 +497,10 @@
           document.querySelectorAll('#map svg')[0],
           'relation-chart.png'
         )
+      },
+      saveSetting() {
+        console.log("saveSetting", this.rdata);
+        localStorage['config_res'] = JSON.stringify(this.rdata)
       },
     },
     mounted() {

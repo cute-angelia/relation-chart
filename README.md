@@ -1,13 +1,19 @@
 # relation-chart
 
-- 家族关系图谱生成器
-- 人物关系图生成器
+- 家族关系图谱
+- 人物关系图
+- 电视剧小说人物关系
 
 可以画出那种类似于复杂人物关系，各个人物基本都有交集没有中心的图，还有可以用不同颜色线表示不同关系
 
-[github star](https://github.com/cute-angelia/relation-chart)
+注意： 拖动请在白色背景图鼠标按住拖动
 
-![预览图](https://ae04.alicdn.com/kf/Hddccc3b8bae147749e43fbd9122d46e1y.png)
+功能
+
+1. 导入
+2. 导出 png
+
+![预览图](https://user-images.githubusercontent.com/26561606/112562911-59f9d480-8e13-11eb-9dab-1b3ce0c0e7e9.png)
 
 [在线地址](https://cute-angelia.github.io/relation-chart/dist/)
 
