@@ -1,7 +1,6 @@
 .PHONY: up
 
 up:
-    npm run build
 	git add .
 	git commit -am "update"
 	git pull origin master
