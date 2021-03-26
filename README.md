@@ -13,9 +13,9 @@
 1. 导入
 2. 导出 png
 
-![预览图](https://user-images.githubusercontent.com/26561606/112562911-59f9d480-8e13-11eb-9dab-1b3ce0c0e7e9.png)
-
 [在线地址](https://cute-angelia.github.io/relation-chart/dist/)
+
+![预览图](https://user-images.githubusercontent.com/26561606/112568274-28860680-8e1d-11eb-97fd-c707d301dd46.png)
 
 ### 感谢
 
