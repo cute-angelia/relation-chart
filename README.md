@@ -13,7 +13,7 @@
 1. 导入
 2. 导出 png
 
-[在线地址](https://cute-angelia.github.io/relation-chart/dist/)
+[在线地址](https://cute-angelia.github.io/relation-chart/)
 
 ![预览图](https://user-images.githubusercontent.com/26561606/112568274-28860680-8e1d-11eb-97fd-c707d301dd46.png)
 
