@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "d3": "^5.9.1",
+    "d3": "^7.6.1",
     "element-ui": "^2.13.1",
     "js-pinyin": "^0.1.9",
     "save-svg-as-png": "^1.4.17",
